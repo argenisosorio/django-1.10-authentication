@@ -1,0 +1,10 @@
+{% extends "base/base.html" %}
+{% block titulo %}App{% endblock %}
+{% block cuerpo %}
+	<h1>Login</h1>
+    <form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Login">
+  </form>
+{% endblock %}
