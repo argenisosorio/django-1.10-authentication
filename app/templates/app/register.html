@@ -3,8 +3,8 @@
 {% block cuerpo %}
 <h1>Register Here!</h1>
 <form action="{% url 'register' %}" method="post">{% csrf_token %}
-{{ form }}
-<input type="submit" value="Register">
+	{{ form }}
+	<input type="submit" value="Register">
 </form>
 <br />
 Already a user? <a href="{% url 'login' %}">Login</a>
