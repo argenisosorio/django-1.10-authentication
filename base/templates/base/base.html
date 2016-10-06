@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>
+      {% block titulo %}Base{% endblock %}
+    </title>
+    {% load staticfiles %}
+    <!-- Bootstrap Styles - css
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ie10-viewport-bug-workaround.css' %}" />
+    <!-- Styles - css
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/theme.css' %}" />
+    <!-- Others - js
+    ================================================== -->
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/holder.min.js' %}" type="text/javascript"></script>
+    <!-- Jquery - js
+    ================================================== -->
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}" type="text/javascript"></script>
+    <!--script>window.jQuery || document.write('<script src="{% static 'js/jquery-1.12.4.min.js' %}"><\/script>')</script-->
+    <!-- Bootstrap - js
+    ================================================== -->
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <!-- Bug fix - js
+    ================================================== -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}" type="text/javascript"></script>
+  </head>
+  <body>
+    
+    <!-- Fixed navbar
+    ================================================== -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'app' %}">Proyecto</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'app' %}">App</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- End navbar -->
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- well
+      ================================================== -->
+      <div class="well body">
+      {% block cuerpo %}
+      {% endblock %}
+      </div> <!-- End well -->
+
+      <br />
+
+    </div> <!-- /container -->
+    
+  </body>
+</html>
